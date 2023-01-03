@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Adaptive page</title>
+        <meta charset = "utf-8">
+
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+    	<h1 id="width"></h1>
+    	<div class="box"></div>
+    	
+    </body>
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+    	var width = $(window).width();
+		var element = document.getElementById("width");
+    	element.innerHTML = "Ширина экрана " + width;
+    	
+    	$(window).resize(function() {
+		 var width = $(window).width();
+			var element = document.getElementById("width");
+	    	element.innerHTML = "Ширина экрана " + width;
+		});
+    </script>
+</html>
